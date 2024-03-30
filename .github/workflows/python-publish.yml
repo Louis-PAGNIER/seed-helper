@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true # Optional, use if you have submodules
+          submodules: true
   
       - name: Build SDist
         run: pipx run build --sdist
@@ -31,7 +31,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-14]
+        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
   
     steps:
       - uses: actions/checkout@v4
