@@ -31,7 +31,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-13]
+        os: [macos-14]
   
     steps:
       - uses: actions/checkout@v4
@@ -61,5 +61,6 @@ jobs:
   
       - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
         with:
+          repository-url: https://test.pypi.org/legacy/
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
