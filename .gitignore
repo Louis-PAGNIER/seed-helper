@@ -1,0 +1,6 @@
+/.idea
+/.vscode
+/poetry.lock
+/.venv
+/build
+/dist
