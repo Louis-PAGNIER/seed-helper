@@ -1,9 +1,7 @@
 [project]
 name = "seedhelper"
 version = "0.1.0"
-description = """A python library that help to find specific Minecraft structures or biomes for a given seed.
-The package is in very early development, so currently only the get_elytras_positions function is available (in the structure module).
-"""
+description = "A python library that help to find specific Minecraft structures or biomes for a given seed."
 authors = [{ name = "Louis Pagnier" }]
 readme = "README.md"
 requires-python = ">=3.10"
