@@ -2,10 +2,10 @@
 name = "seedhelper"
 version = "0.0.2"
 description = "A python library that help to find specific Minecraft structures or biomes for a given seed."
-authors = ["Louis Pagnier"]
+authors = [{ name = "Louis Pagnier" }]
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = { text = "MIT" }
 keywords = ["minecraft", "seed", "biome", "structure", "elytra"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
