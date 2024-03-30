@@ -13,5 +13,12 @@ for ship in ships:
     print(f"Elytra Ship found at: {ship.pos.x}, {ship.pos.z}")
 ```
 
+## Installation
+You can install the package using pip:
+```sh
+pip install seedhelper
+```
+
+
 ## Credits
 The project uses the [Cubiomes](https://github.com/Cubitect/cubiomes) C library, which help to work with Minecraft seeds.

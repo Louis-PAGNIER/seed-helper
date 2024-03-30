@@ -1,6 +1,6 @@
 [project]
 name = "seedhelper"
-version = "0.1.0"
+version = "0.1.1"
 description = "A python library that help to find specific Minecraft structures or biomes for a given seed."
 authors = [{ name = "Louis Pagnier" }]
 readme = "README.md"
