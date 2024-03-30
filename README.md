@@ -5,7 +5,7 @@ The package is currently in very early development, so currently only the get_el
 
 Example:
 ```py
-import seedhelper.structure as sth
+import seedhelper.structures as sth
 
 seed = 123456789
 ships = sth.get_elytras_positions(seed, r=5000, mc_version="1.20")
