@@ -1,7 +1,9 @@
 import ctypes
 import pathlib
+import platform
 
-lib_file = pathlib.Path(__file__).parent / "libstructureshelper.so"
+lib_file = pathlib.Path(__file__).parent / (
+            "libstructureshelper." + ("dll" if platform.system() == "Windows" else "so"))
 _structures_helper = ctypes.CDLL(str(lib_file))
 
 
