@@ -5,6 +5,12 @@
 #define REGION_SIZE (20*16)
 #endif
 
+#ifdef _WIN32
+#define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT
+#endif
+
 #include "../cubiomes/generator.h"
 #include "../cubiomes/finders.h"
 #include "../cubiomes/util.h"
@@ -17,4 +23,4 @@ struct find_elytras_arguments {
     int r;
 };
 
-__declspec(dllexport) Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships);
+DLLEXPORT Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships);
