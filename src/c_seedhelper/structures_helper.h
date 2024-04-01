@@ -17,4 +17,4 @@ struct find_elytras_arguments {
     int r;
 };
 
-Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships);
+__declspec(dllexport) Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships);

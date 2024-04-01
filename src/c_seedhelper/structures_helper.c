@@ -7,11 +7,6 @@
 #include "structures_helper.h"
 
 
-extern "C"
-{
-    __declspec(dllexport) Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships);
-}
-
 
 Piece* get_elytras_positions(struct find_elytras_arguments* arguments, int *n_ships)
 {
