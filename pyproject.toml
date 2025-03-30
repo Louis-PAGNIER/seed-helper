@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "seedhelper"
-version = "0.1.4"
+version = "0.1.5"
 description = "A python package that help to find specific Minecraft structures or biomes for a given seed."
 authors = [{ name = "Louis Pagnier" }]
 readme = "README.md"
