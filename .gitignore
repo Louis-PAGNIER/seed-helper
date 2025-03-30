@@ -4,3 +4,4 @@
 /.venv
 /build
 /dist
+/src/seedhelper.egg-info/*

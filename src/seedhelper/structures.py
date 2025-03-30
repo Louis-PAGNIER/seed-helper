@@ -46,7 +46,7 @@ _structures_helper.get_elytras_positions.argtypes = (FindElytrasArguments, ctype
 _structures_helper.get_elytras_positions.restype = ctypes.POINTER(Piece)
 
 
-def get_elytras_positions(seed: int, mc_version: str = '1.20', x: int = 0, z: int = 0, r: int = 10000) -> list[Piece]:
+def get_elytras_positions(seed: int, mc_version: str = '1.21', x: int = 0, z: int = 0, r: int = 10000) -> list[Piece]:
     arguments = FindElytrasArguments(seed=seed, mc_version=mc_version.encode('utf-8'), x=x, z=z, r=r)
     n_ships = ctypes.c_int(0)
     output_ptr = _structures_helper.get_elytras_positions(arguments, ctypes.byref(n_ships))
