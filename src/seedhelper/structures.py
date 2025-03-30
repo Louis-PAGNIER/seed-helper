@@ -1,11 +1,15 @@
 import ctypes
-import pathlib
 import platform
 
-lib_file = pathlib.Path(__file__).parent / (
-            "libstructureshelper." + ("dll" if platform.system() == "Windows" else "so"))
-_structures_helper = ctypes.CDLL(str(lib_file))
+from pathlib import Path
 
+extension: str = "dll" if platform.system() == "Windows" else "so"
+lib_files: list[Path] = list(Path(__file__).parent.glob(f"libstructureshelper.*{extension}"))
+if len(lib_files) == 0:
+    raise EnvironmentError(f"library libstructureshelper.{extension} is missing.")
+
+
+_structures_helper = ctypes.CDLL(str(lib_files[0].resolve()))
 
 class Pos(ctypes.Structure):
     _fields_ = [('x', ctypes.c_int),

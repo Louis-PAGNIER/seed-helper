@@ -1,18 +1,33 @@
+[build-system]
+requires = ["setuptools>=74.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
 [project]
 name = "seedhelper"
 version = "0.1.4"
-description = "A python library that help to find specific Minecraft structures or biomes for a given seed."
+description = "A python package that help to find specific Minecraft structures or biomes for a given seed."
 authors = [{ name = "Louis Pagnier" }]
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 keywords = ["minecraft", "seed", "biome", "structure", "elytra"]
 classifiers = [
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
 ]
 dependencies = []
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+[tool.setuptools]
+ext-modules = [
+    {name = "seedhelper.libstructureshelper", sources = [
+            "src/c_seedhelper/structures_helper.c",
+            "src/cubiomes/finders.c",
+            "src/cubiomes/generator.c",
+            "src/cubiomes/util.c",
+            "src/cubiomes/biomes.c",
+            "src/cubiomes/biomenoise.c",
+            "src/cubiomes/layers.c",
+            "src/cubiomes/noise.c",
+            "src/cubiomes/quadbase.c"
+    ], include-dirs = ["src/cubiomes"]}
+]
